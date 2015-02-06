@@ -14,7 +14,16 @@ class LinkedList():
 
         self.tail = node
 
-    def remove_node(self, node):
+    def return_list(self):
+        node = self.head
+        output = []
+
+        while node:
+            output.append(node.value)
+            node = node.next
+
+        return output
+
 
 
 
