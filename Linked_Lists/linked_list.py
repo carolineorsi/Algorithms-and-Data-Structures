@@ -123,3 +123,20 @@ def remove_node(node):
     else:
         node.value = None
 
+
+def reversed(linked_list):
+    new_ll = LinkedList()
+    new_ll.add_node(linked_list.head.value)
+    node = linked_list.head.next
+
+    while node:
+        new_node = Node(node.value)
+
+        old_head = new_ll.head
+        new_ll.head = new_node
+        new_ll.head.next = old_head
+
+        node = node.next
+
+    return new_ll
+
