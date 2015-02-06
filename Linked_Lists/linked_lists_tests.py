@@ -41,6 +41,11 @@ class TestLinkedLists(unittest.TestCase):
         self.assertEqual(self.ll.return_node_by_index(1).value, 2)
         self.assertEqual(self.ll.return_node_by_index(2).value, 3)
 
+    def test_remove_node(self):
+        node = self.ll.return_node_by_index(2)
+        remove_node(node)
+        self.assertEqual(self.ll.return_list(), [1, 2, 4])
+
 
 if __name__ == '__main__':
     unittest.main()
