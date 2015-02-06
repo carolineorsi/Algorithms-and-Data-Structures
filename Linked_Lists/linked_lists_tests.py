@@ -27,6 +27,11 @@ class TestLinkedLists(unittest.TestCase):
     def test_len(self):
         self.assertEqual(len(self.ll), 4)
 
+    def test_contains(self):
+        self.assertEqual((3 in self.ll), True)
+        self.assertEqual(6 in self.ll, False)
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

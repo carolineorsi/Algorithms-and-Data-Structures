@@ -14,6 +14,7 @@ class LinkedList():
 
         self.tail = node
 
+
     def return_list(self):
         node = self.head
         output = []
@@ -23,6 +24,7 @@ class LinkedList():
             node = node.next
 
         return output
+
 
     def __len__(self):
         count = 0
@@ -34,6 +36,24 @@ class LinkedList():
 
         return count
 
+
+    def __contains__(self, value):
+        node = self.head
+
+        while node:
+            if node.value == value:
+                return True
+            node = node.next
+
+        return False
+
+
+    def max(self):
+        pass
+
+
+    def min(self):
+        pass
 
 
 class Node():
