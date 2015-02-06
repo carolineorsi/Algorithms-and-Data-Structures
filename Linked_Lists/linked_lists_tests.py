@@ -24,6 +24,9 @@ class TestLinkedLists(unittest.TestCase):
     def test_return_list(self):
         self.assertEqual(self.ll.return_list(), self.ll_as_list)
 
+    def test_len(self):
+        self.assertEqual(len(self.ll), 4)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -24,6 +24,15 @@ class LinkedList():
 
         return output
 
+    def __len__(self):
+        count = 0
+        node = self.head
+
+        while node:
+            count += 1
+            node = node.next
+
+        return count
 
 
 
