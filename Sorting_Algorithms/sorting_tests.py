@@ -15,8 +15,9 @@ class TestSortingAlgorithms(unittest.TestCase):
         bubble_sort(self.unsorted_list)
         self.assertEqual(self.unsorted_list, self.sorted_list)
 
-    # def test_insertion_sort(self):
-    #     self.assertEqual(insertion_sort(self.unsorted_list), self.sorted_list)
+    def test_insertion_sort(self):
+        insertion_sort(self.unsorted_list)
+        self.assertEqual(self.unsorted_list, self.sorted_list)
 
 
 if __name__ == '__main__':
