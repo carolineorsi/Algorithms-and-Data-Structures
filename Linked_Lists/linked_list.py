@@ -1,3 +1,10 @@
+class Node():
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
 class LinkedList():
 
     def __init__(self):
@@ -82,12 +89,22 @@ class LinkedList():
         return node
 
 
+    def find_kth_to_last(self, k):
+        count = 1
+        node = self.head
 
-class Node():
+        while count < k:
+            node = node.next
+            count += 1
 
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+        pointer = self.head
+
+        while node.next:
+            node = node.next
+            pointer = pointer.next
+
+        return pointer
+
 
 
 def remove_node(node):

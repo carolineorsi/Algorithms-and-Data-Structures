@@ -46,6 +46,10 @@ class TestLinkedLists(unittest.TestCase):
         remove_node(node)
         self.assertEqual(self.ll.return_list(), [1, 2, 4])
 
+    def test_find_kth_to_last(self):
+        self.assertEqual(self.ll.find_kth_to_last(2).value, 3)
+        self.assertEqual(self.ll.find_kth_to_last(3).value, 2)
+
 
 if __name__ == '__main__':
     unittest.main()
