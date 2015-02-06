@@ -21,9 +21,17 @@ def merge_sort(lst):
 
 
 def bubble_sort(lst):
-    pass
 
+    while made_swap:
+        made_swap = False
+        for i in range(len(lst) - 1):
+            if lst[i] > lst[i + 1]:
+                temp = lst[i]
+                lst[i] = lst[i + 1]
+                lst[i + 1] = temp
+                made_swap = True
 
+    return lst
 
 
 def main():
