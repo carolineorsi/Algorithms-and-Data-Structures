@@ -22,16 +22,36 @@ def merge_sort(lst):
 
 def bubble_sort(lst):
 
-    while made_swap:
-        made_swap = False
-        for i in range(len(lst) - 1):
-            if lst[i] > lst[i + 1]:
-                temp = lst[i]
-                lst[i] = lst[i + 1]
-                lst[i + 1] = temp
-                made_swap = True
+    sorted = False
+    sorted_lst = lst  # Added this so doesn't sort in place for test cases.
 
-    return lst
+    while not sorted:
+        sorted = True
+        for i in range(len(sorted_lst) - 1):
+            if sorted_lst[i] > sorted_lst[i + 1]:
+                temp = sorted_lst[i]
+                sorted_lst[i] = sorted_lst[i + 1]
+                sorted_lst[i + 1] = temp
+                sorted = False
+
+    return sorted_lst
+
+
+def insertion_sort(lst):
+
+    sorted_lst = lst
+
+    for i in range(1, len(sorted_lst)):
+
+        left_item_index = i - 1
+        current_item = sorted_lst[i]
+
+        while left_item_index >= 0 and current_item < sorted_lst[left_item_index]:
+            sorted_lst[left_item_index + 1] = sorted_lst[left_item_index]
+            sorted_lst[left_item_index] = current_item
+            left_item_index = left_item_index - 1
+
+    return sorted_lst
 
 
 def main():
