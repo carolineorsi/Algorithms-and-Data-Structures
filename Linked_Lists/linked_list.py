@@ -108,6 +108,9 @@ class LinkedList():
 
 
 def remove_node(node):
-    node.value = node.next.value
-    node.next = node.next.next
+    if node.next:
+        node.value = node.next.value
+        node.next = node.next.next
+    else:
+        node.value = None
 

@@ -40,11 +40,16 @@ class TestLinkedLists(unittest.TestCase):
     def test_return_node_by_index(self):
         self.assertEqual(self.ll.return_node_by_index(1).value, 2)
         self.assertEqual(self.ll.return_node_by_index(2).value, 3)
+        self.assertEqual(self.ll.return_node_by_index(3).value, 4)
 
     def test_remove_node(self):
-        node = self.ll.return_node_by_index(2)
-        remove_node(node)
+        node1 = self.ll.return_node_by_index(2)
+        remove_node(node1)
         self.assertEqual(self.ll.return_list(), [1, 2, 4])
+
+        node2 = self.ll.return_node_by_index(2)
+        remove_node(node2)
+        self.assertEqual(self.ll.return_list(), [1, 2, None])
 
     def test_find_kth_to_last(self):
         self.assertEqual(self.ll.find_kth_to_last(2).value, 3)
