@@ -71,9 +71,26 @@ class LinkedList():
 
         return min
 
+    def return_node_by_index(self, index):
+        count = 0
+        node = self.head
+
+        while count < index:
+            node = node.next
+            count += 1
+
+        return node
+
+
 
 class Node():
 
     def __init__(self, value):
         self.value = value
         self.next = None
+
+
+def remove_node(node):
+    node.value = node.next.value
+    node.next = node.next.next
+

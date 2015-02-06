@@ -37,6 +37,10 @@ class TestLinkedLists(unittest.TestCase):
     def test_min(self):
         self.assertEqual(self.ll.min(), 1)
 
+    def test_return_node_by_index(self):
+        self.assertEqual(self.ll.return_node_by_index(1).value, 2)
+        self.assertEqual(self.ll.return_node_by_index(2).value, 3)
+
 
 if __name__ == '__main__':
     unittest.main()
