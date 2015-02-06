@@ -46,7 +46,6 @@ def insertion_sort(lst):
             left_item_index = left_item_index - 1
 
 
-
 def main():
     pass
 
