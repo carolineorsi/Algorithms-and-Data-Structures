@@ -28,9 +28,14 @@ class TestLinkedLists(unittest.TestCase):
         self.assertEqual(len(self.ll), 4)
 
     def test_contains(self):
-        self.assertEqual((3 in self.ll), True)
-        self.assertEqual(6 in self.ll, False)
-        pass
+        self.assertTrue(3 in self.ll)
+        self.assertFalse(6 in self.ll)
+
+    def test_max(self):
+        self.assertEqual(self.ll.max(), 4)
+
+    def test_min(self):
+        self.assertEqual(self.ll.min(), 1)
 
 
 if __name__ == '__main__':

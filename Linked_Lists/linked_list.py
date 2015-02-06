@@ -49,11 +49,27 @@ class LinkedList():
 
 
     def max(self):
-        pass
+        node = self.head
+        max = node.value
+
+        while node:
+            if node.value > max:
+                max = node.value
+            node = node.next
+
+        return max
 
 
     def min(self):
-        pass
+        node = self.head
+        min = node.value
+
+        while node:
+            if node.value < min:
+                min = node.value
+            node = node.next
+
+        return min
 
 
 class Node():
