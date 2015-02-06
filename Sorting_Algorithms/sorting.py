@@ -21,7 +21,6 @@ def merge_sort(lst):
 
 
 def bubble_sort(lst):
-
     sorted = False
 
     while not sorted:
