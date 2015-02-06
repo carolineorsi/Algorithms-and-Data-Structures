@@ -106,6 +106,15 @@ class LinkedList():
         return pointer
 
 
+    def reverse(self):
+        original_head = self.head
+
+        while original_head.next:
+            temp = self.head
+            self.head = original_head.next
+            original_head.next = self.head.next
+            self.head.next = temp
+
 
 def remove_node(node):
     if node.next:

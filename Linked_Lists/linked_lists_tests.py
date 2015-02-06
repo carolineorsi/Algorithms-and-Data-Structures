@@ -55,6 +55,10 @@ class TestLinkedLists(unittest.TestCase):
         self.assertEqual(self.ll.find_kth_to_last(2).value, 3)
         self.assertEqual(self.ll.find_kth_to_last(3).value, 2)
 
+    def test_reverse(self):
+        self.ll.reverse()
+        self.assertEqual(self.ll.return_list(), [4, 3, 2, 1])
+
 
 if __name__ == '__main__':
     unittest.main()
