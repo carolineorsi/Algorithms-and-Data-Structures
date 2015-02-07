@@ -25,3 +25,19 @@ def depth_first_traversal(root):
         traversal_list.extend(depth_first_traversal(root.right))
 
     return traversal_list
+
+
+def depth_first_search(root, value):
+    if root.value == value:
+        return True
+
+    if root.left:
+        return depth_first_search(root.left, value)
+    if root.right: 
+        return depth_first_search(root.right, value)
+
+    return False
+
+
+
+

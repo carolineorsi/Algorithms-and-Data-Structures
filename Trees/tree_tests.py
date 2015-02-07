@@ -17,6 +17,9 @@ class TestTrees(unittest.TestCase):
     def test_depth_first_traversal(self):
         self.assertEqual(depth_first_traversal(self.tree), [1, 2, 3])
 
+    def test_depth_first_search(self):
+        self.assertEqual(depth_first_search(self.tree, 2), True)
+        self.assertEqual(depth_first_search(self.tree, 5), False)
 
 
 if __name__ == '__main__':
