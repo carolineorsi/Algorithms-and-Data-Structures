@@ -1,14 +1,19 @@
 import unittest
-from linked_list import *
+from tree import *
 
 
 class TestTrees(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.tree = BinaryTreeNode(1)
+        self.tree.insertLeft(2)
+        self.tree.insertRight(3)
 
-    def test_(self):
-        self.assertEqual(5, 5)
+    def test_right(self):
+        self.assertEqual(self.tree.right.value, 3)
+
+    def test_left(self):
+        self.assertEqual(self.tree.left.value, 2)
 
 
 if __name__ == '__main__':
