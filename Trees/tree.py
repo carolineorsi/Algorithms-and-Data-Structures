@@ -39,5 +39,17 @@ def depth_first_search(root, value):
     return False
 
 
+def breadth_first_traversal(root):
+    queue = [root]
+    traversal_list = []
 
+    while queue:
+        next = queue.pop(0)
+        traversal_list.append(next.value)
 
+        if next.left:
+            queue.append(next.left)
+        if next.right:
+            queue.append(next.right)
+
+    return traversal_list
