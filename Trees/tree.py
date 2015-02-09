@@ -53,3 +53,19 @@ def breadth_first_traversal(root):
             queue.append(next.right)
 
     return traversal_list
+
+
+def breadth_first_search(root, value):
+    queue = [root]
+
+    while queue:
+        next = queue.pop(0)
+        if next.value == value:
+            return True
+
+        if next.left:
+            queue.append(next.left)
+        if next.right:
+            queue.append(next.right)
+
+    return False

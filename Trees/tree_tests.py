@@ -26,6 +26,10 @@ class TestTrees(unittest.TestCase):
     def test_breadth_first_traversal(self):
         self.assertEqual(breadth_first_traversal(self.tree), [1, 2, 3, 4, 5])
 
+    def test_breadth_first_search(self):
+        self.assertEqual(breadth_first_search(self.tree, 4), True)
+        self.assertEqual(breadth_first_search(self.tree, 6), False)
+
 
 if __name__ == '__main__':
     unittest.main()
