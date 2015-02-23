@@ -1,4 +1,4 @@
-def find_duplicate(lst):
+def find_duplicate_using_index(lst):
     index = lst[0]
 
     while lst[index] != 'X':
@@ -7,6 +7,13 @@ def find_duplicate(lst):
         lst[current] = 'X'
 
     return index
+
+def find_duplicate_using_sort(lst):
+    lst.sort()
+
+    for i in range(len(lst) - 1):
+        if lst[i] == lst[i + 1]:
+            return lst[i]
 
 
 ###########################################################################################
