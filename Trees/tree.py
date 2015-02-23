@@ -15,14 +15,42 @@ class BinaryTreeNode():
 
 
 
-def depth_first_traversal(root):
+def depth_first_traversal_preorder(root):
     traversal_list = [root.value]
 
     if root.left:
-        traversal_list.extend(depth_first_traversal(root.left))
+        traversal_list.extend(depth_first_traversal_preorder(root.left))
     
     if root.right:
-        traversal_list.extend(depth_first_traversal(root.right))
+        traversal_list.extend(depth_first_traversal_preorder(root.right))
+
+    return traversal_list
+
+
+def depth_first_traversal_inorder(root):
+    traversal_list = []
+    
+    if root.left:
+        traversal_list.extend(depth_first_traversal_inorder(root.left))
+
+    traversal_list.append(root.value)
+    
+    if root.right:
+        traversal_list.extend(depth_first_traversal_inorder(root.right))
+
+    return traversal_list
+
+
+def depth_first_traversal_postorder(root):
+    traversal_list = []
+    
+    if root.left:
+        traversal_list.extend(depth_first_traversal_postorder(root.left))
+    
+    if root.right:
+        traversal_list.extend(depth_first_traversal_postorder(root.right))
+
+    traversal_list.append(root.value)
 
     return traversal_list
 
