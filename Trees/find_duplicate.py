@@ -39,6 +39,14 @@ def find_duplicate_nondestructive(lst):
     return min
 
 
+def find_duplicate_using_dictionary(lst):
+    num_dict = {}
+
+    for num in lst:
+        if num_dict.get(num):
+            return num
+        else:
+            num_dict[num] = True
 
 
 ###########################################################################################

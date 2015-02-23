@@ -20,5 +20,9 @@ class TestTrees(unittest.TestCase):
         self.assertEqual(find_duplicate_nondestructive(self.lst1), 4)
         self.assertIn(find_duplicate_nondestructive(self.lst2), [2,4])
 
+    def test_find_duplicate_using_dictionary(self):
+        self.assertEqual(find_duplicate_using_dictionary(self.lst1), 4)
+        self.assertIn(find_duplicate_using_dictionary(self.lst2), [2,4])
+
 if __name__ == '__main__':
     unittest.main()
